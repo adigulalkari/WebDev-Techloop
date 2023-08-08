@@ -13,10 +13,8 @@ const submitBtn = document.getElementById('submit')
 let currentQuiz = 0
 let score = 0
 
-loadQuiz()
-
 function loadQuiz() {
-    console.log(quizData)
+    // Commet the next line to show how it affects
     deselectAnswers();
 
     const currentQuizData = quizData[currentQuiz]
@@ -28,6 +26,10 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d
 }
 
+loadQuiz()
+
+
+// Explain the importance of this function as how the next page retains the selected option
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
@@ -70,3 +72,4 @@ submitBtn.addEventListener('click', () => {
         }
     }
 })
+
